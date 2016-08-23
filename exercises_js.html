@@ -24,6 +24,32 @@ books.push(book3);
 
 console.log(books[2]);
 
+for (var i = 10; i > -1; i--) {
+  if (i !== 0) {
+    console.log(i);
+  } else {
+    console.log("BLASTOFF!");
+  }
+}
+
+var numbers = [5, 23, 98, 234, 1, 0, 3, 177];
+
+for (var i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+
+for (var i = 1; i < 101; i++) {
+  if (i%15 === 0) {
+    console.log("FIZZBUZZ");
+  } else if (i%3 === 0) {
+    console.log("FIZZ");
+  } else if (i%5 === 0) {
+    console.log("BUZZ");
+  } else {
+    console.log(i);
+  }
+}
+
 </script>
 
 </html>
