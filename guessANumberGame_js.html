@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+  
+  var winNumber = Math.floor((Math.random()* 100) + 1);
+
+  for (i = 1; i < 11; i++) {
+    var guess = prompt("Guess a number between 1 and 100");
+    if (guess == winNumber) {
+      console.log("You Win!");
+      break
+    } else if (guess > winNumber) {
+      console.log("Wrong! You guessed " + guess + ". Guess lower!");
+    } else if (guess < winNumber) {
+      console.log("Wrong! You guessed " + guess + ". Guess higher!")
+    }
+  }
+  console.log("The number was " + winNumber);
+
+</script>
+</html>
