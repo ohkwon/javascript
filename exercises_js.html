@@ -59,53 +59,110 @@
 // }
 
 
-function addTwo(number_1, number_2) {
-  var sum = number_1 + number_2;
-  console.log(sum);
-}
+// function addTwo(number_1, number_2) {
+//   var sum = number_1 + number_2;
+//   console.log(sum);
+// }
 
-addTwo(4,2);
+// addTwo(4,2);
 
-function average(array) {
-  var sum = 0;
-  for (var i = 0; i < array.length; i++) {
-    sum = sum + array[i];
+// function average(array) {
+//   var sum = 0;
+//   for (var i = 0; i < array.length; i++) {
+//     sum = sum + array[i];
+//   }
+//   var avg = sum / array.length;
+//   console.log(avg);
+// }
+
+// average([1,2,3,4,5])
+
+// var book = {title: "Harry Potter and the Philosopher's Stone", author: "J.K. Rowling", isbn: "9788700631625", pages: "223", yearOfPublication: "1997"};
+
+// function printDetails(book) {
+//   console.log("Title: " + book["title"]);
+//   console.log("Author: " + book["author"]);
+//   console.log("ISBN: " + book["isbn"]);
+//   console.log("Pages: " + book["pages"]);
+//   console.log("Year of Publication: " + book["yearOfPublication"]);
+// }
+
+// printDetails(book)
+
+// function Book(title, author, isbn, pages, yearOfPublication) {
+//   this.title = title;
+//   this.author = author;
+//   this.isbn = isbn;
+//   this.pages = pages;
+//   this.yearOfPublication = yearOfPublication;
+// }
+
+// var book2 = new Book(
+//   "Harry Potter and the Chamber of Secrets",
+//   "J.K. Rowling",
+//   "9780747560722",
+//   "251",
+//   "1998"
+//   )
+
+// printDetails(book2)
+
+function max(number1, number2) {
+  if (number1 > number2) {
+    return number1;
+  } else if  (number1 < number2) {
+    return number2;
+  } else {
+    return number1;
   }
-  var avg = sum / array.length;
-  console.log(avg);
 }
 
-average([1,2,3,4,5])
+console.log(max(3,5));
 
-var book = {title: "Harry Potter and the Philosopher's Stone", author: "J.K. Rowling", isbn: "9788700631625", pages: "223", yearOfPublication: "1997"};
-
-function printDetails(book) {
-  console.log("Title: " + book["title"]);
-  console.log("Author: " + book["author"]);
-  console.log("ISBN: " + book["isbn"]);
-  console.log("Pages: " + book["pages"]);
-  console.log("Year of Publication: " + book["yearOfPublication"]);
+function maxOfThree(number1, number2, number3) {
+  if (number1 > number2) {
+    if (number1 > number3) {
+      return number1;
+    } else {
+      return number3;
+    }
+  } else {
+    if (number2 > number3) {
+      return number2;
+    } else {
+      return number3;
+    }
+  }
 }
 
-printDetails(book)
+console.log(maxOfThree(5,6,7));
 
-function Book(title, author, isbn, pages, yearOfPublication) {
-  this.title = title;
-  this.author = author;
-  this.isbn = isbn;
-  this.pages = pages;
-  this.yearOfPublication = yearOfPublication;
+function isVowel(char) {
+  if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u" || char === "y") {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-var book2 = new Book(
-  "Harry Potter and the Chamber of Secrets",
-  "J.K. Rowling",
-  "9780747560722",
-  "251",
-  "1998"
-  )
+console.log(isVowel("a"))
+console.log(isVowel("c"))
 
-printDetails(book2)
+function roverspraket(string) {
+  var newstring = "";
+  for (var i = 0; i < string.length; i++) {
+    if (string[i] == " ") {
+      newstring = newstring + string[i];
+    } else if (isVowel(string[i])) {
+      newstring = newstring + string[i];
+    } else {
+      newstring = newstring + string[i] + "o" + string[i];
+    }
+  }
+  return newstring;
+}
+
+console.log(roverspraket("this is a looney function"));
 
 </script>
 
