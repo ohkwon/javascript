@@ -89,7 +89,23 @@ function printDetails(book) {
 
 printDetails(book)
 
+function Book(title, author, isbn, pages, yearOfPublication) {
+  this.title = title;
+  this.author = author;
+  this.isbn = isbn;
+  this.pages = pages;
+  this.yearOfPublication = yearOfPublication;
+}
 
+var book2 = new Book(
+  "Harry Potter and the Chamber of Secrets",
+  "J.K. Rowling",
+  "9780747560722",
+  "251",
+  "1998"
+  )
+
+printDetails(book2)
 
 </script>
 
