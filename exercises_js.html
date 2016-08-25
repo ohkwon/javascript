@@ -164,6 +164,36 @@ function roverspraket(string) {
 
 console.log(roverspraket("this is a looney function"));
 
+function sum(array) {
+  var sum = 0;
+  for (var i = 0; i < array.length; i++) {
+    sum = sum + array[i];
+  }
+  return sum;
+}
+
+function multiply(array) {
+  var product = 1;
+  for (var i = 0; i < array.length; i++) {
+    product = product * array[i];
+  }
+  return product;
+}
+
+console.log(sum([1,2,3,4,5]));
+
+console.log(multiply([1,2,3,4,5]));
+
+function reverse(string) {
+  var newstring = "";
+  for (var i = string.length - 1; i > -1; i--) {
+    newstring = newstring + string[i];
+  }
+  return newstring;
+}
+
+console.log(reverse("racecar backwards"))
+
 </script>
 
 </html>
